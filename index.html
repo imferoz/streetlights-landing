@@ -1,140 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="description" content="Streetlight installation and maintenance services in Oman, including LED and solar lighting solutions for roads, highways, and public spaces. Trust AL WEJHA GROUP for dependable outdoor lighting." />
-  <meta name="keywords" content="streetlight installation Oman, LED lighting Oman, solar streetlights Oman, road lighting services Oman, highway lighting, AL WEJHA GROUP" />
-  <meta name="author" content="AL WEJHA GROUP" />
-  <title>Streetlight Installation & Maintenance in Oman | AL WEJHA GROUP</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <title>Smart Street Lighting Solutions in Oman | AL WEJHA GROUP - Muscat, Salalah, Sohar</title>
+  <meta name="description" content="AL WEJHA GROUP: Oman's Premier Streetlight Experts. Solar & LED Road Lighting Installation/Maintenance Across Oman. Smart City Lighting Solutions for Municipalities.">
+  <meta name="keywords" content="streetlight Oman, LED road lighting Muscat, solar streetlights Salalah, smart lighting Sohar, highway lighting Oman, AL WEJHA GROUP lighting">
+  <link rel="canonical" href="https://streetlights.alwejhagroup.com/">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Smart Street Lighting Solutions in Oman | AL WEJHA GROUP">
+  <meta property="og:description" content="Oman's Leading Streetlight Contractors - Energy-Efficient LED & Solar Lighting Systems for Roads and Public Spaces">
+  <meta property="og:image" content="https://streetlights.alwejhagroup.com/streetlights.webp">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Streetlight Installation Experts in Oman | AL WEJHA GROUP">
+  <meta name="twitter:description" content="Professional Road Lighting Solutions for Muscat, Salalah & All Oman Regions">
+
+  <!-- Inline Critical CSS -->
   <style>
+    :root {
+      --primary-blue: #0a3d62;
+      --accent-gold: #f6b93b;
+      --dark-text: #2d3436;
+    }
     body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #f4f4f4;
+      font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      color: #333;
       line-height: 1.6;
+      color: var(--dark-text);
+      background: #f8f9fa;
     }
     header {
-      background-color: #0b74de;
+      background: linear-gradient(45deg, rgba(10,61,98,0.85), rgba(22,160,133,0.8)),
+                  url('streetlights.webp') center/cover;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       color: #fff;
-      padding: 40px 20px;
-      text-align: center;
+      padding: 0 20px;
+      position: relative;
     }
-    header h1 {
-      font-size: 2.2rem;
-      margin: 0;
+    .glow-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 4rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    nav {
-      text-align: center;
-      margin: 20px 0;
+    .glow-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+      position: relative;
+      overflow: hidden;
     }
-    nav a {
-      margin: 0 10px;
-      color: #004080;
-      text-decoration: underline;
+    .glow-card:hover {
+      transform: translateY(-5px);
+    }
+    .region-pill {
+      display: inline-block;
+      background: var(--accent-gold);
+      color: var(--primary-blue);
+      padding: 8px 20px;
+      border-radius: 25px;
+      margin: 5px;
       font-weight: 600;
     }
-    section {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-    }
-    h2, h3 {
-      color: #004080;
-    }
-    .cta, .backlink {
-      display: inline-block;
-      background-color: #0b74de;
-      color: #fff;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      margin: 10px 0;
-    }
-    .cta:hover, .backlink:hover {
-      background-color: #095cb5;
-    }
-    .contact {
-      margin-top: 20px;
-      text-align: center;
-    }
-    .contact a {
-      display: inline-block;
-      margin: 5px 10px;
-      color: #0b74de;
-      text-decoration: none;
-    }
-    img.hero-img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin: 20px 0;
-    }
-    footer {
-      background-color: #e0ecf4;
-      text-align: center;
+    .lighting-cta {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: var(--primary-blue);
       padding: 15px;
-      font-size: 0.9rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      z-index: 1000;
+    }
+    .light-btn {
+      background: var(--accent-gold);
+      color: var(--primary-blue);
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s;
+    }
+    .light-btn:hover {
+      box-shadow: 0 4px 12px rgba(246,185,59,0.3);
+    }
+    @media (max-width: 768px) {
+      header { min-height: 60vh; }
+      .glow-grid { grid-template-columns: 1fr; }
+      .lighting-cta { flex-wrap: wrap; }
     }
   </style>
+
+  <!-- Preload Hero Image -->
+  <link rel="preload" href="streetlights.webp" as="image">
+  
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "AL WEJHA GROUP Street Lighting",
+    "image": "streetlights.webp",
+    "description": "Oman's premier street lighting solutions provider",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "Oman",
+      "addressRegion": ["Muscat", "Salalah", "Sohar", "Nizwa"]
+    },
+    "telephone": "+96879271055",
+    "email": "business@alwejhagroup.com",
+    "sameAs": ["https://www.alwejhagroup.com/"]
+  }
+  </script>
 </head>
+
 <body>
   <header>
-    <h1>Streetlight Installation & Maintenance in Oman</h1>
-    <p>LED & Solar Lighting Solutions for Roads & Public Spaces</p>
+    <div>
+      <h1>Smart Street Lighting Solutions in Oman</h1>
+      <p>Illuminating Roads Across Muscat, Salalah & Sohar</p>
+      <div style="margin-top: 2rem;">
+        <span class="region-pill">Muscat Governorate</span>
+        <span class="region-pill">Dhofar Region</span>
+        <span class="region-pill">Al Batinah</span>
+      </div>
+    </div>
   </header>
 
-  <!-- Navigation with Backlinks to Main Website Pages -->
-  <nav>
-    <a href="https://www.alwejhagroup.com/">Home</a>
-    <a href="https://www.alwejhagroup.com/area-of-expertise" target="_blank">Area Of Expertise</a>
-    <a href="https://www.alwejhagroup.com/our-services" target="_blank">Our Services</a>
-    <a href="https://www.alwejhagroup.com/our-clients" target="_blank">Our Clients</a>
-    <a href="https://www.alwejhagroup.com/contact" target="_blank">Contact</a>
+  <nav style="background: var(--primary-blue); padding: 1rem; position: sticky; top: 0; z-index: 100;">
+    <a href="https://www.alwejhagroup.com/" style="color: #fff; margin: 0 1.5rem;">Home</a>
+    <a href="https://www.alwejhagroup.com/area-of-expertise" style="color: #fff; margin: 0 1.5rem;">Expertise</a>
+    <a href="https://www.alwejhagroup.com/our-services" style="color: #fff; margin: 0 1.5rem;">Services</a>
+    <a href="https://www.alwejhagroup.com/contact" style="color: #fff; margin: 0 1.5rem;">Contact</a>
   </nav>
 
-  <section>
-    <!-- Hero Image -->
-    <img class="hero-img" src="./streetlights.webp" alt="Streetlights in Oman - LED and Solar Lighting Solutions">
+  <main>
+    <section class="glow-grid">
+      <article class="glow-card">
+        <h2>LED Road Lighting</h2>
+        <p>Energy-efficient highway lighting systems meeting Omani standards</p>
+        <ul style="text-align: left; margin-top: 1rem;">
+          <li>✓ IP67 Weatherproof Fixtures</li>
+          <li>✓ Smart Dimming Technology</li>
+          <li>✓ 5-Year Warranty</li>
+        </ul>
+      </article>
 
-    <h2>High-Quality Outdoor Lighting Across Oman</h2>
-    <p>
-      AL WEJHA GROUP delivers professional streetlight installation and maintenance for roads, highways, and public spaces across Oman. From LED lighting to solar-powered systems, our energy-efficient solutions help enhance safety and visibility.
-    </p>
+      <article class="glow-card">
+        <h2>Solar Streetlights</h2>
+        <p>Off-grid lighting solutions for remote areas in Oman</p>
+        <ul style="text-align: left; margin-top: 1rem;">
+          <li>✓ 300W Solar Panels</li>
+          <li>✓ Lithium-Ion Batteries</li>
+          <li>✓ Automatic Dawn/Dusk Sensors</li>
+        </ul>
+      </article>
 
-    <h3>Why Choose Our Streetlight Services?</h3>
-    <ul>
-      <li>Expert installation of LED and solar streetlights.</li>
-      <li>Long-lasting, cost-effective lighting solutions.</li>
-      <li>Compliance with local regulations and safety standards.</li>
-      <li>Ongoing maintenance and swift repairs.</li>
-    </ul>
+      <article class="glow-card">
+        <h2>Smart City Lighting</h2>
+        <p>IoT-enabled systems for Omani municipalities</p>
+        <ul style="text-align: left; margin-top: 1rem;">
+          <li>✓ Remote Monitoring</li>
+          <li>✓ Fault Detection Systems</li>
+          <li>✓ Energy Consumption Analytics</li>
+        </ul>
+      </article>
+    </section>
 
-    <h3>Learn More About AL WEJHA GROUP</h3>
-    <p>
-      Discover our comprehensive range of solutions by visiting our main website:
-      <a class="backlink" href="https://www.alwejhagroup.com/" target="_blank">Visit AL WEJHA GROUP</a>
-    </p>
+    <section style="text-align: center; padding: 3rem 1rem; background: #fff;">
+      <h2>Oman-Wide Lighting Services</h2>
+      <div style="max-width: 800px; margin: 2rem auto;">
+        <p>We illuminate roads across all regions:</p>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0;">
+          <div class="region-pill" style="background: var(--primary-blue); color: #fff;">Muscat</div>
+          <div class="region-pill" style="background: var(--primary-blue); color: #fff;">Salalah</div>
+          <div class="region-pill" style="background: var(--primary-blue); color: #fff;">Sohar</div>
+          <div class="region-pill" style="background: var(--primary-blue); color: #fff;">Nizwa</div>
+          <div class="region-pill" style="background: var(--primary-blue); color: #fff;">Sur</div>
+          <div class="region-pill" style="background: var(--primary-blue); color: #fff;">Ibri</div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <!-- Call-To-Action -->
-    <p>
-      Ready to light up your roads or public spaces? Contact us for a free consultation!
-    </p>
-    <a class="cta" href="https://wa.me/96879271055" target="_blank">Chat on WhatsApp</a>
-    <a class="cta" href="tel:+96879271055">Call Us</a>
-    <a class="cta" href="mailto:business@alwejhagroup.com">Email Us</a>
-  </section>
+  <div class="lighting-cta">
+    <a href="https://wa.me/96879271055" class="light-btn" aria-label="WhatsApp Chat">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      WhatsApp
+    </a>
+    <a href="tel:+96879271055" class="light-btn" aria-label="Call Now">
+      📞 Call Now
+    </a>
+    <a href="mailto:business@alwejhagroup.com" class="light-btn" aria-label="Email Us">
+      ✉️ Email
+    </a>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 AL WEJHA GROUP | 
-      <a href="https://www.alwejhagroup.com/sitemap.xml">Sitemap</a> | 
-      <a href="https://www.alwejhagroup.com/privacy-policy">Privacy Policy</a> | 
-      <a href="https://www.alwejhagroup.com/terms-of-service">Terms of Service</a>
-    </p>
+  <footer style="background: var(--primary-blue); color: #fff; padding: 2rem; text-align: center;">
+    <p>© 2025 AL WEJHA GROUP - Street Lighting Experts in Oman</p>
+    <nav style="margin-top: 1rem;">
+      <a href="https://www.alwejhagroup.com/privacy" style="color: var(--accent-gold); margin: 0 1rem;">Privacy Policy</a>
+      <a href="https://www.alwejhagroup.com/certifications" style="color: var(--accent-gold); margin: 0 1rem;">Certifications</a>
+      <a href="https://www.alwejhagroup.com/projects" style="color: var(--accent-gold); margin: 0 1rem;">Lighting Projects</a>
+    </nav>
   </footer>
+
+  <!-- Lazy Load Images -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const images = document.querySelectorAll('img');
+      images.forEach(img => img.loading = 'lazy');
+    });
+  </script>
 </body>
 </html>
